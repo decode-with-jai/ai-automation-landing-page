@@ -1,4 +1,4 @@
-# 🚀 AI Fiver Automation Landing Page
+# 🚀 AI Automation Landing Page
 
 A modern, high-converting **AI automation landing page** featuring an interactive full-screen popup, course selection system, and dynamic redirection logic built using **HTML, CSS, and JavaScript**.
 
@@ -7,7 +7,7 @@ A modern, high-converting **AI automation landing page** featuring an interactiv
 ## 🌐 Live Preview
 
 > 🔗 Add your live website link here
-> Example: https://yourdomain.com
+> Example: https://decode-with-jai.github.io/ai-automation-landing-page/
 
 ---
 
