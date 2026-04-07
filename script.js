@@ -1,12 +1,12 @@
 // ============================
 // PASTE YOUR MAIN WEBSITE LINK HERE
 // ============================
-const MAIN_WEBSITE_URL = "https://your-main-website-link.com";
+const MAIN_WEBSITE_URL = "https://grmkart.com/";
 
 // ============================
 // PASTE YOUR POPUP BUTTON LINK HERE
 // ============================
-const POPUP_BUTTON_LINK = "https://your-button-link.com";
+const POPUP_BUTTON_LINK = "https://grmkart.com/";
 
 // Show popup after 10 seconds
 setTimeout(() => {
