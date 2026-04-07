@@ -1,44 +1,59 @@
 // ============================
 // PASTE YOUR MAIN WEBSITE LINK HERE
 // ============================
-const MAIN_WEBSITE_URL = "https://grmkart.com/";
-
-// ============================
-// PASTE YOUR POPUP BUTTON LINK HERE
-// ============================
-const POPUP_BUTTON_LINK = "https://grmkart.com/";
+const MAIN_WEBSITE_URL = "https://your-main-website-link.com";
 
 // Show popup after 10 seconds
 setTimeout(() => {
   const popupOverlay = document.getElementById("popupOverlay");
   const closePopup = document.getElementById("closePopup");
   const popupButton = document.getElementById("popupButton");
+  const courseCards = document.querySelectorAll(".course-card");
 
-  if (popupOverlay) {
-    popupOverlay.classList.add("active");
+  if (!popupOverlay) return;
 
-    if (popupButton) {
-      popupButton.setAttribute("href", POPUP_BUTTON_LINK);
-    }
+  popupOverlay.classList.add("active");
 
-    // If user does nothing for 3 sec after popup opens, redirect
-    const autoRedirect = setTimeout(() => {
-      window.location.href = MAIN_WEBSITE_URL;
-    }, 3000);
+  let selectedLink = "";
+  const activeCard = document.querySelector(".course-card.active");
 
-    // Close popup on cross click
-    if (closePopup) {
-      closePopup.addEventListener("click", () => {
-        popupOverlay.classList.remove("active");
-        clearTimeout(autoRedirect);
-      });
-    }
+  if (activeCard) {
+    selectedLink = activeCard.getAttribute("data-link");
+    if (popupButton) popupButton.setAttribute("href", selectedLink);
+  }
 
-    // Stop redirect if popup button clicked
-    if (popupButton) {
-      popupButton.addEventListener("click", () => {
-        clearTimeout(autoRedirect);
-      });
-    }
+  // Auto redirect after 3 seconds if user does nothing
+  const autoRedirect = setTimeout(() => {
+    window.location.href = MAIN_WEBSITE_URL;
+  }, 3000);
+
+  // Course selection
+  courseCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      courseCards.forEach((item) => item.classList.remove("active"));
+      card.classList.add("active");
+
+      selectedLink = card.getAttribute("data-link");
+      if (popupButton) {
+        popupButton.setAttribute("href", selectedLink);
+      }
+
+      clearTimeout(autoRedirect);
+    });
+  });
+
+  // Close popup
+  if (closePopup) {
+    closePopup.addEventListener("click", () => {
+      popupOverlay.classList.remove("active");
+      clearTimeout(autoRedirect);
+    });
+  }
+
+  // Main button click
+  if (popupButton) {
+    popupButton.addEventListener("click", () => {
+      clearTimeout(autoRedirect);
+    });
   }
 }, 10000);

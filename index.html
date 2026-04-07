@@ -240,21 +240,49 @@
   </footer>
 
   <!-- Fullscreen Popup -->
-  <div id="popupOverlay" class="popup-overlay">
-    <div class="popup-box">
-      <button id="closePopup" class="popup-close">×</button>
-      <div class="popup-content">
-        <p class="popup-tag">SPECIAL AI AUTOMATION MESSAGE</p>
-        <h2>Your Popup Heading Here</h2>
-        <p>
-          Replace this text with your own offer, message, redirect content, lead magnet,
-          coupon line, or call-to-action.
-        </p>
-        <a href="#" id="popupButton" class="btn btn-primary">Add Your Link Here</a>
-        <p class="popup-note">If no action is taken, the page will redirect automatically.</p>
+<div id="popupOverlay" class="popup-overlay">
+  <div class="popup-box">
+    <button id="closePopup" class="popup-close">×</button>
+
+    <div class="popup-content popup-course-content">
+      <p class="popup-tag">CHOOSE YOUR AI PATH</p>
+      <h2>Select an AI Course to Continue</h2>
+      <p class="popup-subtext">
+        Pick the course that matches your interest. You can change all text, links, and titles later.
+      </p>
+
+      <div class="course-grid">
+        <div class="course-card active" data-link="https://yourwebsite.com/ai-automation-course">
+          <span class="course-badge">Popular</span>
+          <h3>AI Automation Mastery</h3>
+          <p>Learn workflows, triggers, smart integrations, and business automation systems.</p>
+        </div>
+
+        <div class="course-card" data-link="https://yourwebsite.com/ai-chatbot-course">
+          <span class="course-badge">Hot</span>
+          <h3>AI Chatbot Builder</h3>
+          <p>Create intelligent chatbot flows for lead generation, support, and sales systems.</p>
+        </div>
+
+        <div class="course-card" data-link="https://yourwebsite.com/ai-marketing-course">
+          <span class="course-badge">New</span>
+          <h3>AI Marketing Systems</h3>
+          <p>Build AI-powered content, follow-up funnels, email flows, and ad support systems.</p>
+        </div>
       </div>
+
+      <div class="popup-action-wrap">
+        <a href="#" id="popupButton" class="btn btn-primary popup-main-btn">
+          Continue with Selected Course
+        </a>
+      </div>
+
+      <p class="popup-note">
+        If no option is selected, you’ll be redirected automatically.
+      </p>
     </div>
   </div>
+</div>
 
   <script src="script.js"></script>
 </body>
