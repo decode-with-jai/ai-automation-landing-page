@@ -23,9 +23,9 @@ setTimeout(() => {
   }
 
   // Auto redirect after 3 seconds if user does nothing
-  const autoRedirect = setTimeout(() => {
-    window.location.href = MAIN_WEBSITE_URL;
-  }, 3000);
+//   const autoRedirect = setTimeout(() => {
+//     window.location.href = MAIN_WEBSITE_URL;
+//   }, 3000);
 
   // Course selection
   courseCards.forEach((card) => {
