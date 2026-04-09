@@ -13,12 +13,9 @@ A modern, high-converting **AI automation landing page** featuring an interactiv
 
 ## 📸 Project Preview
 
-> Add screenshots here (recommended for better presentation)
-
-```md
 ![Homepage Preview](./assets/home.png)
 ![Popup Preview](./assets/popup.png)
-```
+
 
 ---
 
